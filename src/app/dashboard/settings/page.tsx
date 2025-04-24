@@ -6,7 +6,21 @@ export const metadata: Metadata = {
   description: 'Configure your account settings',
 };
 
-// Client form component (marked with 'use client')
+// Settings page component (server component)
+export default function SettingsPage() {
+  return (
+    <div>
+      <header className="mb-8">
+        <h1 className="text-3xl font-bold">Account Settings</h1>
+        <p className="text-gray-600 mt-2">Manage your account preferences and settings</p>
+      </header>
+      
+      <SettingsForm />
+    </div>
+  );
+}
+
+// Client form component (separated from the main page component)
 'use client';
 function SettingsForm() {
   return (
@@ -136,20 +150,6 @@ function SettingsForm() {
         </button>
       </div>
     </form>
-  );
-}
-
-// Settings page component (server component)
-export default function SettingsPage() {
-  return (
-    <div>
-      <header className="mb-8">
-        <h1 className="text-3xl font-bold">Account Settings</h1>
-        <p className="text-gray-600 mt-2">Manage your account preferences and settings</p>
-      </header>
-      
-      <SettingsForm />
-    </div>
   );
 }
 
