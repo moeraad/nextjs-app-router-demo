@@ -8,7 +8,7 @@ const nextConfig = {
   },
   // Advanced configuration for performance optimization
   experimental: {
-    optimizeCss: true,     // Enable CSS optimization
+    // Removing optimizeCss to avoid the critters dependency issue
     scrollRestoration: true // Enable scroll restoration
   },
 };
